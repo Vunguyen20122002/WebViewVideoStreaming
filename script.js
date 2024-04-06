@@ -1,24 +1,17 @@
-function displayOnChange() {
+function ChangeHoverAndFocus(element) {
+    
+    const href = element.getAttribute("href");
+    const navLinks = document.querySelectorAll(".nav-link");
 
-    // Lấy các phần tử HTML
-    const displayHome = document.querySelector('#home');
-    const displayAbout = document.querySelector('#about');
-    const displayIntroduce = document.querySelector('#introduce');
-    const displayInstruct = document.querySelector('#instruct');
-  
-    // Hiển thị phần tử tương ứng với sự kiện thay đổi
-    switch (true) {
-      case "home":
-        displayHome.style.display = "block";
-        break;
-      case "about":
-        displayAbout.style.display = "block";
-        break;
-      case "introduce":
-        displayIntroduce.style.display = "block";
-        break;
-      case "instruct":
-        displayInstruct.style.display = "block";
-        break;
-    }
+    navLinks.forEach(link => 
+        link.classList.remove("active"));
+    
+    navLinks.forEach(link =>{
+        if(link.getAttribute("href") === href){
+            link.classList.add("active");
+        }
+    });
+    console.log(element.getAttribute("href"));
+
   }
+
