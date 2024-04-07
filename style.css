@@ -29,6 +29,8 @@ h6 {
     top: 0;
     left: 0;
     right: 0;
+    display: flex;
+    justify-content: center;
     position: fixed;
     background: #fff;
     transition: all 0.5s;
@@ -43,6 +45,8 @@ h6 {
 }
 
 #header .logo {
+    display: flex;
+    justify-content: center;
     font-size: 30px;
     margin: 0px 10px;
     padding: 0;
@@ -214,18 +218,24 @@ h6 {
 # Home Section
 --------------------------------------------------------------*/
 #home {
+    display: flex;
+    justify-content: center;
+    position: relative;
     width: 100%;
-    height: 110vh;
+    height: 100vh;
     background-size: cover;
-    margin-bottom: -200px;
+    
 }
 
 #home .container {
+    margin-top: 100px;
     position: relative;
+    border-bottom: 1px solid transparent; 
+    box-shadow: 0px 8px 10px -10px rgba(0, 0, 0, 0.5); 
+    
 }
 
 #home h1 {
-    padding-top: 110px;
     font-size: 48px;
     font-weight: 700;
     line-height: 56px;
@@ -259,7 +269,6 @@ h6 {
 
 @media (min-width: 1024px) {
     #home {
-        top: 1000px;
         background-attachment: fixed;
     }
 }
@@ -296,13 +305,24 @@ h6 {
 # About
 --------------------------------------------------------------*/
 .about {
+    display: flex;
+    justify-content: center;
     position: relative;
-    width: 100%;
-    height: 100vh;
+    /* width: 100%;
+    height: 100vh; */
 }
 
-.about .container-fluid {
-    padding-top: 100px;
+.about .container {
+    margin-top: 100px;
+    width: 766.438px;
+    padding-bottom: 100px;
+    border-bottom: 1px solid transparent; 
+    box-shadow: 0px 8px 10px -10px rgba(0, 0, 0, 0.5); 
+}
+
+.about h2{
+    display: flex;
+    justify-content: center;
 }
 
 @keyframes pulsate-btn {
@@ -322,39 +342,25 @@ h6 {
 # introduce
 --------------------------------------------------------------*/
 .introduce {
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: 100vh;
-    overflow: hidden;
 }
 
 .introduce .container {
-    padding-top: 100px;
+    margin-top: 100px;
+    width: 766.438px;
+    border-bottom: 1px solid transparent; 
+    box-shadow: 0px 8px 10px -10px rgba(0, 0, 0, 0.5); 
 }
 
-.introduce .nav-link {
-    border: 0;
-    padding: 12px 15px 12px 0;
-    transition: 0.3s;
-    color: #2c4964;
-    border-radius: 0;
-    border-right: 2px solid #ebf1f6;
-    font-weight: 600;
-    font-size: 15px;
-  }
-
-.introduce .nav-link:hover {
-    color: #1977cc;
+.introduce h2 {
+    display: flex;
+    justify-content: center;
 }
 
-.introduce .nav-link.active {
-    color: #1977cc;
-    border-color: #1977cc;
-}
-
-.introduce .tab-pane.active {
-    animation: fadeIn 0.5s ease-out;
-}
-
+  
 @media (max-width: 992px) {
     .introduce .nav-link {
         border: 0;
@@ -371,6 +377,8 @@ h6 {
 # instruct
 --------------------------------------------------------------*/
 .instruct {
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: 100vh;
     background: #fff;
@@ -378,4 +386,68 @@ h6 {
 
 .instruct .container {
     padding-top: 100px;
+
 }
+/* Card About */
+.slider-container {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+  }
+  
+  .card {
+    flex: 0 0 auto;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+    margin: 0 10px;
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-content {
+    text-align: center;
+  }
+  
+  .card-content p {
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .card-content a {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card-content a:hover {
+    background-color: #0056b3;
+  }
+
+  .icon-link {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .icon-link:hover {
+    color: #007bff;
+  }
+
+  .card img {
+    border-radius: 50%; /* Tạo hình ảnh thành hình tròn */
+    width: 100px; /* Điều chỉnh kích thước ảnh */
+    height: 100px; /* Điều chỉnh kích thước ảnh */
+    object-fit: cover; /* Đảm bảo ảnh sẽ không bị vỡ hình */
+    margin: 0 auto 15px; /* Canh chỉnh ảnh */
+    display: block; /* Đảm bảo ảnh được canh chỉnh giữa */
+  }
