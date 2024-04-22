@@ -38,12 +38,57 @@
     <main class="main">
         <section id="home" class="d-flex align-items-center">
             <div class="container">
-                <h1>Welcome to Video Streaming</h1>
+                <h1>Welcome to Media Video Streaming</h1>
                 <!-- <h2>Chúng tôi là đội ngũ tào leo</h2> -->
                 <a href="#" class="btn-get-started scrollto">Get LinkDown</a>
             </div>
         </section><!-- End Home -->
+        <!-- ======= Introduce Section ======= -->
+        <section id="introduce" class="introduce">
+            <div class="container">
+                <h2>Giới thiệu</h2>
+                <div class="title">
+                    <h3>Media player streaming là gì?</h3>
+                    <p>Ứng dụng media player streaming là một ứng dụng cho phép người dùng phát video trực tuyến
+                        từ các nguồn khác nhau như YouTube, Link trên Website với mã đuôi m3u8, các file video đã
+                        được tải sẵn về máy, v.v.</p>
+                    <ul>Ứng dụng có các tab chức năng chính sau:
+                        <li> Phần danh sách: Hiển thị danh sách các video mà người dùng có thể phát. Danh sách
+                            này có thể được lọc theo các tiêu chí khác nhau như thể loại, nguồn video, v.v.</li>
+                        <li>Phần phát video: Hiển thị video mà người dùng đang phát. Phần này có các nút điều
+                            khiển phát/tạm dừng, tua nhanh/tua lại, điều chỉnh âm lượng, v.v.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Công nghệ và thư viện</h3>
 
+                    <h4>Công nghệ:</h4>
+                    <p>Sử dụng ngôn ngữ lập trình Python3.</p>
+                    <h4>Thư viện:</h4>
+                    <ul>
+                        <li>PyQT5: Hỗ trợ cho thiết kế giao diện.</li>
+                        <li>Pytube: Hỗ trợ cho phát video từ Youtube.</li>
+                        <li>GStreamer: Hỗ trợ cho phát video với nhiều định dạng và âm thanh khác nhau.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Các chức năng cơ bản</h3>
+                    <ul>
+                        <li>Phát video.</li>
+                        <li>Phát/Tải/Xóa video trong danh sách.</li>
+                        <li>Danh sách video.</li>
+                        <li>Phát/Dừng video.</li>
+                        <li>Tua tới/lùi video.</li>
+                        <li>Tăng/Giảm âm lượng.</li>
+                        <li>Toàn bộ/Thu nhỏ màn hình.</li>
+                        <li>Phát lại video.</li>
+                        <li>Download video khi đang phát.</li>
+                        <li>Thoát ứng dụng.</li>
+                    </ul>
+                </div>
+            </div>
+        </section><!-- End Introduce Section -->
         <!-- ======= About Section ======= -->
         <section id="about" class="about">
             <div class="container">
@@ -59,7 +104,7 @@
                             <a href="https://github.com/minhtuan1108" class="icon-link">
                                 <i class="fab fa-github"></i>
                             </a>
-                            <a href="mailto:minhtuan11.08@gmail.com" class="icon-link">
+                            <a href="mailto:minhtuan.1108tn@gmail.com" class="icon-link">
                                 <i class="far fa-envelope"></i>
                             </a>
                         </div>
@@ -82,18 +127,66 @@
                 </div>
             </div>
         </section><!-- End About Section -->
-
-        <!-- ======= Introduce Section ======= -->
-        <section id="introduce" class="introduce">
-            <div class="container">
-                <h2>Giới thiệu</h2>
-            </div>
-        </section><!-- End Introduce Section -->
-
         <!-- ======= Instruct Section ======= -->
         <section id="instruct" class="instruct">
             <div class="container">
                 <h2>Hướng dẫn</h2>
+                <div class="instructions">
+                    <h4>Clone this repository:</h4>
+                    <ul>
+                        <p>- git clone <a
+                                href="https://github.com/minhtuan1108/PythonMediaPlayer.git">https://github.com/minhtuan1108/PythonMediaPlayer.git</a>.
+                    </p>
+                        <p>- cd PythonMediaPlayer.</p>
+                    </ul>
+                    <h4>Install dependencies:</h4>
+                    <ul>
+                        <p>- pip install -r requirements.txt</p>
+                        <p>or install one by one dependency:</p>
+        
+                        <b>PyQt5 install:</b>
+                        <p>- pip install PyQt5</p>
+                        
+                        <li> <b>PyQtWebEngine install:</b></li>
+                       
+                        <p>- pip install PyQtWebEngine</p>
+                      
+                        <li><b>pytube install:</b></li>
+                        
+                        <p>- pip install pytube</p>
+                        
+                       <li><b>ffmpeg install (for Linux):</b></li>
+                        <p># On Ubuntu / Debian:</p>
+                        <p>- sudo apt-get update</p>
+                        <p>- sudo apt-get install ffmpeg</p>
+                        <p># On CentOS / Fedora:</p>
+                        <p>- sudo yum install epel-release</p>
+                        <p>- sudo yum install ffmpeg</p>
+                        <li><b>m3u8-To-MP4 install:</b></li>
+                        <p>- python -m pip install m3u8-To-MP4</p>
+                        
+
+                    </ul>
+                    <h4>Install Gstreamer:</h4>
+                    <ul>
+                        <li><b>On Ubuntu / Debian:</b></li>
+                        <p>- apt-get install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
+                            libgstreamer-plugins-bad1.0-dev gstreamer1.0-plugins-base gstreamer1.0-plugins-good
+                            gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav gstreamer1.0-tools
+                            gstreamer1.0-x gstreamer1.0-alsa gstreamer1.0-gl gstreamer1.0-gtk3 gstreamer1.0-qt5
+                            gstreamer1.0-pulseaudio</p>
+                        <li><b>On Fedora:</b></li>
+                        <p>- dnf install gstreamer1-devel gstreamer1-plugins-base-tools gstreamer1-doc
+                            gstreamer1-plugins-base-devel gstreamer1-plugins-good gstreamer1-plugins-good-extras
+                            gstreamer1-plugins-ugly gstreamer1-plugins-bad-free gstreamer1-plugins-bad-free-devel
+                            gstreamer1-plugins-bad-free-extras</p>
+                    </ul>
+                    <h4>Run App:</h4>
+                    <ul>
+                        <p>- python3 /path/to/your/app/PythonMediaPlayer/main.py</p>
+                    </ul>
+                </div>
+
             </div>
         </section><!-- End Instruct Section -->
     </main>
